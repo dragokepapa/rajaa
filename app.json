@@ -1,0 +1,41 @@
+{
+  "name": "Raja Mantri Pro Bot",
+  "description": "Advanced Raja Mantri Chor Sipahi Telegram Bot with Profile, Store, Leaderboard & Coins System",
+  "keywords": ["telegram", "bot", "raja mantri", "game", "pyrogram"],
+  "repository": "https://github.com/dragokepapa/Raja-mantri",
+  "logo": "https://i.ibb.co/wFJkgTnF/photo-2026-04-02-07-53-05-7624066901147333632.jpg",
+  "success_url": "/",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token from @BotFather",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram User ID (for sudo commands)",
+      "required": true
+    },
+    "MAX_ROUNDS": {
+      "description": "Number of rounds per game (default 5)",
+      "required": false,
+      "value": "5"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  }
+}
